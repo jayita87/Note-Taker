@@ -5,9 +5,9 @@ const router = require('express').Router();
 const notes = require('../db/db.json');
 
 router.get("/notes", (req, res) => {
-    fs.readFile('db/db.json', 'utf8', (err, data) => {
-      let notes = JSON.parse(data);
-      res.json(notes)
+    fs.readFile('./Develop/db/db.json', 'utf8', (err, data) => {
+      let notes1 = JSON.parse(data);
+      res.json(notes1)
     })
   });
 
@@ -23,12 +23,12 @@ router.post("/notes", (req, res) => {
         }
         notes.push(newNote);
 
-        fs.readFile("db/db.json", "utf-8", (err, data) => {
+        fs.readFile("./Develop/db/db.json", "utf-8", (err, data) => {
             console.log("printing logs to test")
             console.log(data);
             var parsedRes = JSON.parse(data);
             parsedRes.push(newNote);
-            fs.writeFile("db/db.json", JSON.stringify(parsedRes), err => {
+            fs.writeFile("./Develop/db/db.json", JSON.stringify(parsedRes), err => {
                 err ? console.error(err) : console.log("Success")
             })
         })
@@ -37,12 +37,12 @@ router.post("/notes", (req, res) => {
 
  router.delete('/notes/:id', (req, res) => {
    
-    fs.readFile('db/db.json', 'utf8', (err, data) => {
+    fs.readFile('./Develop/db/db.json', 'utf8', (err, data) => {
         let notes = JSON.parse(data);
 
         notes = notes.filter(note => (note.id !== req.params.id));
 
-        fs.writeFile('db/db.json', JSON.stringify(notes), (err) => {
+        fs.writeFile('./Develop/db/db.json', JSON.stringify(notes), (err) => {
             if (err) {
                 console.log(err);
             } else {
