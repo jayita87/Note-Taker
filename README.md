@@ -1,4 +1,9 @@
 # Note-Taker
+
+### :rocket: **Deployed on Heroku**
+
+https://note-taker2-heroku.herokuapp.com/
+
 ## Table of Contents
 
 ---
@@ -42,6 +47,19 @@ If you aren't interested in using the project on your machine, you can find it o
 ### <a name="Usage"></a>Usage
 
 This is a very light weight note taking application as mentioned before. There aren't too many features that make it competitive with other note taking applications and was more so to help teach myself backend web development.
+
+## :wrench: **Technologies Used**
+
+- Node.js
+- Express.js
+- RESTful API
+- HTML 5
+- CSS 3
+- Javascript
+- Bootstrap 5
+- VS Code
+- Heroku
+
   
 ### <a name="License"></a>License
 
