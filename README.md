@@ -22,7 +22,13 @@
 ---
 
 ### <a name="Description"></a>Description
-This lightweight application allows for users to write and store notes to a server using heroku. All notes are stored server-side and is my first dive into backend web development.
+This project builds a web application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+
+There are three main features of this application:
+
+1. When both title and text are entered, click the save icon to save the note to list.
+2. Click the red delete button in the list to delete the corresponding note from the list.
+3. Click the new entry button on top right corner to open a text area to create new note.
 
 ### <a name="Screenshots"></a>Screenshots
 <img width="1263" alt="Screen Shot 2022-09-19 at 10 43 36 AM" src="https://user-images.githubusercontent.com/107072905/191081834-b216ea71-176d-4d95-b938-432067c70631.png">
